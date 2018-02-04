@@ -1,3 +1,0 @@
-INSERT INTO detail_appels (`compte_facture`, `num_facture`, `num_abonne`, 
-        `date`, `heure`, `duree`, `type`)
-VALUES (12345,12345,12345,'2018-02-04','12:42:52','00:24:53',1)

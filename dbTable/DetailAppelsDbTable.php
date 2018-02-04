@@ -102,7 +102,7 @@ VALUES (".$data[self::colCompteF].",".$data[self::colNumF].",".$data[self::colNu
     }
 
     public function getTimeCall($date) {
-        $sql = "SELECT SEC_TO_TIME( SUM( TIME_TO_SEC( `".self::colDuree."` ) ) ) AS totaltime FROM ".self::tableName." WHERE type = ".self::type_appel." AND date >= '".$date."' GROUP BY ".self::colNumA;
+        $sql = "SELECT BIG_SEC_TO_TIME( SUM( TIME_TO_SEC( `".self::colDuree."` ) ) ) AS totaltime FROM ".self::tableName." WHERE type = ".self::type_appel." AND date >= '".$date."'";
         $result = $this->dbManager->query($sql);
         if($result) {
             $result = $result->fetch_array();
